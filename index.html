@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        /* Navbar Styles */
+        .bg-primary-style2 {
+            background-color: #dc3545;
+        }
+
+        .navbar {
+            padding: 1rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .btn-navbar {
+            color: #ffffff;
+        }
+
+        .btn-offers {
+            background-color: #ffc107;
+            color: #000000;
+            border: none;
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        .dropdown-item:hover {
+            background-color: #e9ecef;
+        }
+
+        .header-user {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 0;
+            height: 90vh;
+            background-color: #343a40;
+            color: #ffffff;
+            border-right: 1px solid #495057;
+            overflow-y: auto;
+            transition: width 0.3s ease;
+            position: fixed;
+            top: 10;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .sidebar-menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-menu li {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        .sidebar-menu li:hover {
+            background-color: #495057;
+        }
+
+        .sidebar-menu li i {
+            margin-right: 10px;
+        }
+
+        .sidebar-menu li span {
+            flex: 1;
+        }
+
+        .sidebar-menu .submenu-indicator {
+            color: #adb5bd;
+        }
+
+        .sidebar-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            border-top: 1px solid #495057;
+        }
+
+        .sidebar-footer a {
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar-footer i {
+            font-size: 1.2em;
+        }
+
+        /* Content Styles */
+        .content {
+            margin-left: 0;
+            transition: margin-left 0.3s ease;
+            padding: 20px;
+        }
+
+        .content.sidebar-open {
+            margin-left: 250px;
+        }
+
+        /* Toggle Button */
+        .btn-navbar-toggle {
+            color: #ffffff;
+            background-color: #dc3545;
+            border: none;
+        }
+
+        .btn-navbar-toggle:hover {
+            background-color: #c82333;
+        }
+
+        /* Restaurant and Carousel Styles */
+        .restaurant-card {
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-card img {
+            object-fit: cover;
+            height: 200px;
+            width: 100%;
+        }
+
+        .carousel-item img {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .offers-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-primary-style2">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">
+                    <img src="https://w7.pngwing.com/pngs/490/22/png-transparent-computer-icons-purchase-order-blog-order-miscellaneous-text-rectangle-thumbnail.png"
+                        alt="Logo" class="img-fluid" style="max-height: 40px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="locationDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-map-marker-alt me-2"></i>Jawaddi Ludhiana...
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+                                <li><a class="dropdown-item" href="#">New York, USA</a></li>
+                                <li><a class="dropdown-item" href="#">London, UK</a></li>
+                                <li><a class="dropdown-item" href="#">Paris, France</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <a href="search.html" class="btn btn-navbar me-2">
+                            <i class="fas fa-search me-2"></i>Search
+                        </a>
+                        <a href="offers.html" class="btn btn-offers me-2">
+                            <i class="fas fa-tag me-2"></i>Offers
+                        </a>
+                        <a href="login.html" class="btn btn-navbar me-2">
+                            <i class="fas fa-user me-2"></i>Sign in
+                        </a>
+                        <div class="dropdown">
+                            <button class="btn btn-navbar dropdown-toggle" type="button" id="userDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=2211"
+                                    alt="User" class="rounded-circle header-user me-2">
+                                Hi Jack
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="profile.html">My account</a></li>
+                                <li><a class="dropdown-item" href="faq.html">Delivery support</a></li>
+                                <li><a class="dropdown-item" href="contact-us.html">Contact us</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="terms.html">Terms of use</a></li>
+                                <li><a class="dropdown-item" href="privacy.html">Privacy policy</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <a href="checkout.html" class="btn btn-navbar ms-2">
+                            <i class="fas fa-shopping-cart me-2"></i>Cart
+                        </a>
+                        <!-- Toggle Button -->
+                        <button class="btn btn-navbar btn-navbar-toggle ms-2" id="toggleButton"
+                            onclick="toggleSidebar()">
+                            <i class="fas fa-bars" id="toggleIcon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <ul class="sidebar-menu">
+            <li><i class="fas fa-home"></i><span>Homepage</span></li>
+            <li><i class="fas fa-list"></i><span>My Orders</span></li>
+            <li><i class="fas fa-heart"></i><span>Favorites</span></li>
+            <li><i class="fas fa-chart-line"></i><span>Trending</span></li>
+            <li><i class="fas fa-star"></i><span>Most Popular</span></li>
+            <li><i class="fas fa-utensils"></i><span>Restaurant Detail</span></li>
+            <li><i class="fas fa-map-marker-alt"></i><span>Live Map</span></li>
+            <li><i class="fas fa-user"></i><span>Profile</span><i class="fas fa-chevron-right submenu-indicator"></i>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="#"><i class="fas fa-question-circle"></i><span>FAQ</span></a>
+            <a href="#"><i class="fas fa-phone"></i><span>Help</span></a>
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        <!-- Carousel for Offers -->
+        <div id="offersCarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/1200x300?text=Special+Offer+1" class="d-block w-100"
+                        alt="Special Offer 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x300?text=Special+Offer+2" class="d-block w-100"
+                        alt="Special Offer 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x300?text=Special+Offer+3" class="d-block w-100"
+                        alt="Special Offer 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#offersCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#offersCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Featured Restaurants -->
+        <div class="container mt-5">
+            <h2 class="mb-4">Featured Restaurants</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card">
+                        <img src="https://via.placeholder.com/350x200?text=Restaurant+1" class="card-img-top"
+                            alt="Restaurant 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant 1</h5>
+                            <p class="card-text">A brief description of Restaurant 1. Enjoy a variety of dishes and
+                                excellent service.</p>
+                            <a href="#" class="btn btn-primary">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card">
+                        <img src="https://via.placeholder.com/350x200?text=Restaurant+2" class="card-img-top"
+                            alt="Restaurant 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant 2</h5>
+                            <p class="card-text">A brief description of Restaurant 2. Explore our delicious dishes and
+                                specials.</p>
+                            <a href="#" class="btn btn-primary">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card">
+                        <img src="https://via.placeholder.com/350x200?text=Restaurant+3" class="card-img-top"
+                            alt="Restaurant 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant 3</h5>
+                            <p class="card-text">A brief description of Restaurant 3. Taste our new dishes and exclusive
+                                offers.</p>
+                            <a href="#" class="btn btn-primary">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let sidebarOpen = false;
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById("mySidebar");
+            const toggleIcon = document.getElementById("toggleIcon");
+            const content = document.getElementById("content");
+
+            if (sidebarOpen) {
+                // Close the sidebar
+                sidebar.style.width = "0";
+                content.classList.remove("sidebar-open");
+                toggleIcon.classList.remove("fa-times");
+                toggleIcon.classList.add("fa-bars");
+            } else {
+                // Open the sidebar
+                sidebar.style.width = "250px";
+                content.classList.add("sidebar-open");
+                toggleIcon.classList.remove("fa-bars");
+                toggleIcon.classList.add("fa-times");
+            }
+
+            sidebarOpen = !sidebarOpen;
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
