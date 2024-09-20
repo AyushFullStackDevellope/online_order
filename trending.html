@@ -368,359 +368,251 @@
             </div>
         </nav>
     </header>
-
-    <!-- Sidebar -->
-    <div id="mySidebar" class="sidebar">
-        <ul class="sidebar-menu">
-            <li><i class="fas fa-home"></i><span>Homepage</span></li>
-            <li><i class="fas fa-list"></i><span>My Orders</span></li>
-            <li><i class="fas fa-heart"></i><span>Favorites</span></li>
-            <li><i class="fas fa-chart-line"></i><span>Trending</span></li>
-            <li><i class="fas fa-star"></i><span>Most Popular</span></li>
-            <li><i class="fas fa-utensils"></i><span>Restaurant Detail</span></li>
-            <li><i class="fas fa-map-marker-alt"></i><span>Live Map</span></li>
-            <li><i class="fas fa-user"></i><span>Profile</span><i class="fas fa-chevron-right submenu-indicator"></i>
-            </li>
-        </ul>
-        <div class="sidebar-footer">
-            <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
-            <a href="#"><i class="fas fa-question-circle"></i><span>FAQ</span></a>
-            <a href="#"><i class="fas fa-phone"></i><span>Help</span></a>
+    <div class="container mt-5"> 
+        <h2 class="section-title">Trending This Week</h2>
+        <div class="mb-4">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false" style="margin-left: 90%;">
+                Filter
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                <li><a class="dropdown-item" href="#" data-sort="price-low">Price: Low to High</a></li>
+                <li><a class="dropdown-item" href="#" data-sort="price-high">Price: High to Low</a></li>
+                <li><a class="dropdown-item" href="#" data-sort="rating">Rating: High to Low</a></li>
+                <li><a class="dropdown-item" href="#" data-sort="distance">Distance: Near to Far</a></li>
+            </ul>
         </div>
+
+        <div class="row" id="restaurantList">
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card">
+                        <div class="card-media position-relative">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
+                            <div class="card-offer-badge">15% OFF</div>
+                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
+                                class="far fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant Name</h5>
+                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
+                            <div class="ratings d-flex justify-content-between align-items-center">
+                                <div class="stars text-warning">
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star-half-alt"></span>
+                                </div>
+                                <span class="reviews text-muted">320 Reviews</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card">
+                        <div class="card-media position-relative">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
+                            <div class="card-offer-badge">15% OFF</div>
+                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
+                                    class="far fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant Name</h5>
+                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
+                            <div class="ratings d-flex justify-content-between align-items-center">
+                                <div class="stars text-warning">
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star-half-alt"></span>
+                                </div>
+                                <span class="reviews text-muted">320 Reviews</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card">
+                        <div class="card-media position-relative">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
+                            <div class="card-offer-badge">15% OFF</div>
+                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
+                                    class="far fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant Name</h5>
+                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
+                            <div class="ratings d-flex justify-content-between align-items-center">
+                                <div class="stars text-warning">
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star-half-alt"></span>
+                                </div>
+                                <span class="reviews text-muted">320 Reviews</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card">
+                        <div class="card-media position-relative">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
+                            <div class="card-offer-badge">15% OFF</div>
+                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
+                                    class="far fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant Name</h5>
+                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
+                            <div class="ratings d-flex justify-content-between align-items-center">
+                                <div class="stars text-warning">
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star-half-alt"></span>
+                                </div>
+                                <span class="reviews text-muted">320 Reviews</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card">
+                        <div class="card-media position-relative">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
+                            <div class="card-offer-badge">15% OFF</div>
+                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
+                                    class="far fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant Name</h5>
+                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
+                            <div class="ratings d-flex justify-content-between align-items-center">
+                                <div class="stars text-warning">
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star-half-alt"></span>
+                                </div>
+                                <span class="reviews text-muted">320 Reviews</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card restaurant-card">
+                        <div class="card-media position-relative">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
+                            <div class="card-offer-badge">15% OFF</div>
+                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
+                                    class="far fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant Name</h5>
+                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
+                            <div class="ratings d-flex justify-content-between align-items-center">
+                                <div class="stars text-warning">
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star-half-alt"></span>
+                                </div>
+                                <span class="reviews text-muted">320 Reviews</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other restaurants -->
+        </div>
+
     </div>
+    <script>
+        // // Sample restaurant data
+        // const restaurants = [
+        //     { name: "Pasta Paradise", cuisine: "Italian", price: "$$", distance: 2, rating: 4.5, reviews: 320, image: "https://via.placeholder.com/350x200", offer: "15% OFF" },
+        //     { name: "Sushi Sensation", cuisine: "Japanese", price: "$$$", distance: 1.5, rating: 4.8, reviews: 450, image: "https://via.placeholder.com/350x200", offer: "20% OFF" },
+        //     { name: "Burger Bliss", cuisine: "American", price: "$", distance: 0.5, rating: 4.2, reviews: 280, image: "https://via.placeholder.com/350x200", offer: "10% OFF" },
+        //     { name: "Curry House", cuisine: "Indian", price: "$$", distance: 3, rating: 4.6, reviews: 390, image: "https://via.placeholder.com/350x200", offer: "Free Dessert" },
+        //     { name: "Taco Town", cuisine: "Mexican", price: "$", distance: 1, rating: 4.3, reviews: 310, image: "https://via.placeholder.com/350x200", offer: "2 for 1 Tacos" },
+        //     { name: "Pizzeria Perfection", cuisine: "Italian", price: "$$", distance: 2.5, rating: 4.7, reviews: 520, image: "https://via.placeholder.com/350x200", offer: "Family Deal" }
+        // ];
 
-    <div id="content" class="content">
-        <!-- Improved Offers Section -->
-        <section class="offers-section">
-            <div class="container">
-                <h2 class="section-title">Special Offers</h2>
-                <div id="offersCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="https://via.placeholder.com/600x300?text=50%+Off+on+First+Order"
-                                        alt="50% Off on First Order" class="img-fluid rounded">
-                                </div>
-                                <div class="col-md-6 d-flex align-items-center">
-                                    <div>
-                                        <h3>50% Off on Your First Order</h3>
-                                        <p>Use code WELCOME50 at checkout. Valid for new customers only.</p>
-                                        <a href="#" class="btn btn-primary">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="https://via.placeholder.com/600x300?text=Free+Delivery"
-                                        alt="Free Delivery" class="img-fluid rounded">
-                                </div>
-                                <div class="col-md-6 d-flex align-items-center">
-                                    <div>
-                                        <h3>Free Delivery on Orders Over $30</h3>
-                                        <p>Enjoy free delivery on all orders above $30. Limited time offer!</p>
-                                        <a href="#" class="btn btn-primary">Explore Menu</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#offersCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#offersCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </section>
+        // function renderRestaurants(sortedRestaurants) {
+        //     const restaurantList = document.getElementById('restaurantList');
+        //     restaurantList.innerHTML = '';
 
-        <div class="container mt-5">
-            <h2 class="section-title">Trending Restaurants</h2>
-            <a href="trending.html" class=" btn-link"
-                style="display: flex; justify-content: flex-end; color: rgb(244, 80, 4); margin: 20px; text-decoration: none;">View
-                all »</a>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card restaurant-card">
-                        <div class="card-media position-relative">
-                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
-                            <div class="card-offer-badge">15% OFF</div>
-                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
-                                    class="far fa-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Restaurant Name</h5>
-                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
-                            <div class="ratings d-flex justify-content-between align-items-center">
-                                <div class="stars text-warning">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-half-alt"></span>
-                                </div>
-                                <span class="reviews text-muted">320 Reviews</span>
-                            </div>
-                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card restaurant-card">
-                        <div class="card-media position-relative">
-                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
-                            <div class="card-offer-badge">15% OFF</div>
-                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
-                                    class="far fa-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Restaurant Name</h5>
-                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
-                            <div class="ratings d-flex justify-content-between align-items-center">
-                                <div class="stars text-warning">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-half-alt"></span>
-                                </div>
-                                <span class="reviews text-muted">320 Reviews</span>
-                            </div>
-                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card restaurant-card">
-                        <div class="card-media position-relative">
-                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
-                            <div class="card-offer-badge">15% OFF</div>
-                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
-                                    class="far fa-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Restaurant Name</h5>
-                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
-                            <div class="ratings d-flex justify-content-between align-items-center">
-                                <div class="stars text-warning">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-half-alt"></span>
-                                </div>
-                                <span class="reviews text-muted">320 Reviews</span>
-                            </div>
-                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Repeat for other restaurants -->
-            </div>
-        </div>
-        <div class="container mt-5">
-            <h2 class="section-title">Most Popular</h2>
-            <a href="popular.html" class=" btn-link"
-                style="display: flex; justify-content: flex-end; color: rgb(244, 80, 4); margin: 20px; text-decoration: none;">View
-                all »</a>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card restaurant-card">
-                        <div class="card-media position-relative">
-                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
-                            <div class="card-offer-badge">15% OFF</div>
-                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
-                                    class="far fa-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Restaurant Name</h5>
-                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
-                            <div class="ratings d-flex justify-content-between align-items-center">
-                                <div class="stars text-warning">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-half-alt"></span>
-                                </div>
-                                <span class="reviews text-muted">320 Reviews</span>
-                            </div>
-                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card restaurant-card">
-                        <div class="card-media position-relative">
-                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
-                            <div class="card-offer-badge">15% OFF</div>
-                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
-                                    class="far fa-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Restaurant Name</h5>
-                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
-                            <div class="ratings d-flex justify-content-between align-items-center">
-                                <div class="stars text-warning">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-half-alt"></span>
-                                </div>
-                                <span class="reviews text-muted">320 Reviews</span>
-                            </div>
-                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card restaurant-card">
-                        <div class="card-media position-relative">
-                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Restaurant Image">
-                            <div class="card-offer-badge">15% OFF</div>
-                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
-                                    class="far fa-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Restaurant Name</h5>
-                            <p class="card-text text-muted">Italian · $$ · 2 KM away</p>
-                            <div class="ratings d-flex justify-content-between align-items-center">
-                                <div class="stars text-warning">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-half-alt"></span>
-                                </div>
-                                <span class="reviews text-muted">320 Reviews</span>
-                            </div>
-                            <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Repeat for other restaurants -->
-            </div>
-        </div>
-        <div class="container mt-5">
-            <h2 class="section-title">Most Sales</h2>
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <span></span>
-                <a href="#" class="btn-link" style="color: rgb(244, 80, 4); text-decoration: none;">26 places »</a>
-            </div>
+        //     sortedRestaurants.forEach(restaurant => {
+        //         const restaurantCard = `
+        //         <div class="col-md-4 mb-4">
+        //             <div class="card restaurant-card">
+        //                 <div class="card-media position-relative">
+        //                     <img src="${restaurant.image}" class="card-img-top" alt="${restaurant.name}">
+        //                     <div class="card-offer-badge">${restaurant.offer}</div>
+        //                 </div>
+        //                 <div class="card-body">
+        //                     <h5 class="card-title">${restaurant.name}</h5>
+        //                     <p>${restaurant.cuisine} · ${restaurant.price} · ${restaurant.distance} KM away</p>
+        //                     <div class="ratings d-flex justify-content-between align-items-center">
+        //                         <div class="stars text-warning">
+        //                             ${'<i class="fa fa-star"></i>'.repeat(Math.floor(restaurant.rating))}
+        //                             ${restaurant.rating % 1 !== 0 ? '<i class="fa fa-star-half-alt"></i>' : ''}
+        //                         </div>
+        //                         <span class="reviews text-muted">${restaurant.reviews} Reviews</span>
+        //                     </div>
+        //                     <a href="#" class="btn btn-primary mt-3 w-100">View Menu</a>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     `;
+        //         restaurantList.innerHTML += restaurantCard;
+        //     });
+        // }
 
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card restaurant-card">
-                        <div class="card-media position-relative">
-                            <img src="https://via.placeholder.com/350x200?text=The+osahan+Restaurant"
-                                class="card-img-top" alt="The osahan Restaurant">
-                            <span class="badge bg-primary position-absolute top-0 start-0 m-2">Promoted</span>
-                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
-                                    class="far fa-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">The osahan Restaurant</h5>
-                            <p class="card-text">North · Hamburgers · Pure veg</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span><i class="far fa-clock"></i> 15-25 min</span>
-                                <span class="badge bg-success">₹1 (300+)</span>
-                            </div>
-                            <div class="mt-2">
-                                <span class="badge bg-danger">OFFER</span>
-                                <span>65% OSAHAN50</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        // function sortRestaurants(criteria) {
+        //     let sortedRestaurants = [...restaurants];
+        //     switch (criteria) {
+        //         case 'price-low':
+        //             sortedRestaurants.sort((a, b) => a.price.length - b.price.length);
+        //             break;
+        //         case 'price-high':
+        //             sortedRestaurants.sort((a, b) => b.price.length - a.price.length);
+        //             break;
+        //         case 'rating':
+        //             sortedRestaurants.sort((a, b) => b.rating - a.rating);
+        //             break;
+        //         case 'distance':
+        //             sortedRestaurants.sort((a, b) => a.distance - b.distance);
+        //             break;
+        //     }
+        //     renderRestaurants(sortedRestaurants);
+        // }
 
-                <div class="col-md-4 mb-4">
-                    <div class="card restaurant-card">
-                        <div class="card-media position-relative">
-                            <img src="https://via.placeholder.com/350x200?text=Thai+Famous+Cuisine" class="card-img-top"
-                                alt="Thai Famous Cuisine">
-                            <span class="badge bg-primary position-absolute top-0 start-0 m-2">Promoted</span>
-                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
-                                    class="far fa-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Thai Famous Cuisine</h5>
-                            <p class="card-text">North Indian · Indian · Pure veg</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span><i class="far fa-clock"></i> 30-35 min</span>
-                                <span class="badge bg-success">₹1 (300+)</span>
-                            </div>
-                            <div class="mt-2">
-                                <span class="badge bg-danger">OFFER</span>
-                                <span>65% off</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        // // Event listeners for filter options
+        // document.querySelectorAll('.dropdown-item').forEach(item => {
+        //     item.addEventListener('click', (e) => {
+        //         e.preventDefault();
+        //         const sortCriteria = e.target.getAttribute('data-sort');
+        //         sortRestaurants(sortCriteria);
+        //     });
+        // });
 
-                <div class="col-md-4 mb-4">
-                    <div class="card restaurant-card">
-                        <div class="card-media position-relative">
-                            <img src="https://via.placeholder.com/350x200?text=The+osahan+Restaurant"
-                                class="card-img-top" alt="The osahan Restaurant">
-                            <span class="badge bg-primary position-absolute top-0 start-0 m-2">Promoted</span>
-                            <button class="btn btn-light position-absolute top-0 end-0 m-2"><i
-                                    class="far fa-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">The osahan Restaurant</h5>
-                            <p class="card-text">North · Hamburgers · Pure veg</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span><i class="far fa-clock"></i> 15-25 min</span>
-                                <span class="badge bg-success">₹1 (300+)</span>
-                            </div>
-                            <div class="mt-2">
-                                <span class="badge bg-danger">OFFER</span>
-                                <span>65% OSAHAN50</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>
-            let sidebarOpen = false;
+        // // Initial render
+        // renderRestaurants(restaurants);
+    </script>
 
-            function toggleSidebar() {
-                const sidebar = document.getElementById("mySidebar");
-                const toggleIcon = document.getElementById("toggleIcon");
-                const content = document.getElementById("content");
-                const body = document.body; // Reference to the body
-
-                if (sidebarOpen) {
-                    // Close the sidebar
-                    sidebar.style.width = "0";
-                    content.classList.remove("sidebar-open");
-                    toggleIcon.classList.remove("fa-times");
-                    toggleIcon.classList.add("fa-bars");
-                    body.classList.remove("sidebar-open"); // Remove class from body
-                } else {
-                    // Open the sidebar
-                    sidebar.style.width = "250px";
-                    content.classList.add("sidebar-open");
-                    toggleIcon.classList.remove("fa-bars");
-                    toggleIcon.classList.add("fa-times");
-                    body.classList.add("sidebar-open"); // Add class to body
-                }
-
-                sidebarOpen = !sidebarOpen;
-            }
-
-        </script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
