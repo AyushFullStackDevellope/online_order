@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Delivery Website</title>
+    <!-- +++++++ Bootstrap,External CSS , favicon links++++++++ -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700">
@@ -13,6 +14,7 @@
 </head>
 
 <body>
+    <!-- ========================== Header Section Sarts ========================== -->
     <header class="bg-primary-style2">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
@@ -83,8 +85,9 @@
             </div>
         </nav>
     </header>
+    <!-- ========================== Header Section Ends ========================== -->
 
-    <!-- Sidebar -->
+    <!-- ========================== Navbar Section Starts ========================== -->
     <div id="mySidebar" class="sidebar">
         <ul class="sidebar-menu">
             <li><i class="fas fa-home"></i><span>Homepage</span></li>
@@ -103,9 +106,11 @@
             <a href="#"><i class="fas fa-phone"></i><span>Help</span></a>
         </div>
     </div>
-
+    <!-- ========================== Navbar Section Ends ========================== -->
+    <!-- ========================== Hero Section Starts ========================== -->
     <div id="content" class="content">
         <!-- Improved Offers Section -->
+        <!-- ========================== Offers Courosel Section Sarts ========================== -->
         <section class="offers-section">
             <div class="container">
                 <h2 class="section-title">Special Offers</h2>
@@ -155,7 +160,8 @@
                 </div>
             </div>
         </section>
-
+        <!-- ========================== Offers Section Ends ========================== -->
+        <!-- ========================== Trending Section Starts ========================== -->
         <div class="container mt-5">
             <h2 class="section-title">Trending Restaurants</h2>
             <a href="trending.html" class=" btn-link"
@@ -240,6 +246,9 @@
                 <!-- Repeat for other restaurants -->
             </div>
         </div>
+        <!-- ========================== Trending Section Ends ========================== -->
+
+        <!-- ========================== Most Popular Section Starts ========================== -->
         <div class="container mt-5">
             <h2 class="section-title">Most Popular</h2>
             <a href="popular.html" class=" btn-link"
@@ -324,11 +333,13 @@
                 <!-- Repeat for other restaurants -->
             </div>
         </div>
+        <!-- ========================== Most Popular Section Ends ========================== -->
+
+        <!-- ========================== Most Sales Section Starts ========================== -->
         <div class="container mt-5">
             <h2 class="section-title">Most Sales</h2>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <span></span>
-                <a href="#" class="btn-link" style="color: rgb(244, 80, 4); text-decoration: none;">26 places »</a>
             </div>
 
             <div class="row">
@@ -405,7 +416,9 @@
                 </div>
             </div>
         </div>
+        <!-- ========================== Most Sales Section Ends ========================== -->
         <script>
+            // Script For Sidebar Functionality
             let sidebarOpen = false;
 
             function toggleSidebar() {
@@ -434,7 +447,7 @@
             }
 
         </script>
-
+        <!-- Script link for bootstrap -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 

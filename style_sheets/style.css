@@ -196,6 +196,7 @@ body.sidebar-open {
     background-color: #007bff;
 }
 
+/* Restaurant Cards Styling */
 .card-image-container {
     position: relative;
 }
@@ -271,7 +272,7 @@ body.sidebar-open {
     font-size: 0.85em;
     color: #999;
 }
-
+/* Button styling */
 .btn-primary {
     background-color: #007bff;
     border: none;
