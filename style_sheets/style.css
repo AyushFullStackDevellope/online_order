@@ -6,51 +6,6 @@
     background-color: #f8f9fa;
 }
 
-/* Navbar Styles */
-.bg-primary-style2 {
-    background-color: #dc3545;
-}
-
-.navbar {
-    padding: 1rem;
-}
-
-.navbar-nav .nav-link {
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-}
-
-.btn-navbar {
-    color: #ffffff;
-}
-
-.btn-offers {
-    background-color: #ffc107;
-    color: #000000;
-    border: none;
-}
-
-.dropdown-menu {
-    border: none;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.dropdown-item:hover {
-    background-color: #e9ecef;
-}
-
-.header-user {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-}
-
 /* Sidebar Styles */
 .sidebar {
     width: 0;
@@ -281,4 +236,92 @@ body.sidebar-open {
 
 .btn-primary:hover {
     background-color: #0056b3;
+}
+
+/* Location Dropdown Styling */
+#locationDropdown .dropdown-menu {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#locationDropdown input[type="text"] {
+    border-radius: 4px;
+    padding: 8px;
+}
+
+#locationList .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* For smooth transition on the input box */
+.dropdown-menu input[type="text"] {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#locationList {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#locationList .dropdown-item {
+    transition: background-color 0.2s ease-in-out;
+}
+/* Navbar Styling */
+.navbar {
+    padding: 1rem;
+    background-color: #ef3b1b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar-nav .nav-link {
+    color: #333; /* Dark text for better contrast */
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Subtle hover effect */
+    border-radius: 4px;
+}
+
+.btn-warning {
+    background-color: #ff9800; /* Bright color for Offers button */
+    border: none;
+}
+
+.btn-outline-dark {
+    border-color: #333;
+    color: #333;
+}
+
+.btn-dark {
+    background-color: #333;
+    border: none;
+    color: white;
+}
+
+/* Improved Dropdown Styling */
+#locationDropdown .dropdown-menu {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#locationDropdown input[type="text"] {
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+#locationList .dropdown-item {
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+#locationList .dropdown-item:hover {
+    background-color: #f1f1f1;
 }

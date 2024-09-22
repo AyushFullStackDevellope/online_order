@@ -16,9 +16,9 @@
 <body>
     <!-- ========================== Header Section Sarts ========================== -->
     <header class="bg-primary-style2">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark  shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="home.html">
+                <a class="navbar-brand" href="index.html">
                     <img src="https://w7.pngwing.com/pngs/490/22/png-transparent-computer-icons-purchase-order-blog-order-miscellaneous-text-rectangle-thumbnail.png"
                         alt="Logo" class="img-fluid" style="max-height: 40px;">
                 </a>
@@ -28,56 +28,50 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Location Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="locationDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-map-marker-alt me-2"></i>Katol, Maharashtra
+                                <i class="fas fa-map-marker-alt me-2"></i><span id="selectedLocation">Katol,
+                                    Maharashtra</span>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="locationDropdown">
-                                <li><a class="dropdown-item" href="#">Warud, Maharashtra</a></li>
-                                <li><a class="dropdown-item" href="#">Paradsinga, Maharashtra</a></li>
-                                <li><a class="dropdown-item" href="#">Savargaon, Maharashtra</a></li>
-                            </ul>
+                            <div class="dropdown-menu p-3" aria-labelledby="locationDropdown" style="min-width: 250px;">
+                                <input type="text" class="form-control mb-2" id="locationSearch"
+                                    placeholder="Search for location..." onkeyup="filterLocations()">
+                                <ul id="locationList" class="list-unstyled mb-0">
+                                    <li><a class="dropdown-item" href="#"
+                                            onclick="selectLocation('Warud, Maharashtra')">Warud, Maharashtra</a></li>
+                                    <li><a class="dropdown-item" href="#"
+                                            onclick="selectLocation('Warud, Maharashtra')">Katol, Maharashtra</a></li>
+                                    <li><a class="dropdown-item" href="#"
+                                            onclick="selectLocation('Paradsinga, Maharashtra')">Paradsinga,
+                                            Maharashtra</a></li>
+                                    <li><a class="dropdown-item" href="#"
+                                            onclick="selectLocation('Savargaon, Maharashtra')">Savargaon,
+                                            Maharashtra</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                     <div class="d-flex align-items-center">
+                        <!-- Search Form -->
                         <form class="d-flex me-2">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         </form>
-                        <a href="offers.html" class="btn btn-offers me-2">
+                        <!-- Offers Button -->
+                        <a href="sections/offers.html" class="btn btn-warning me-2">
                             <i class="fas fa-tag me-2"></i>Offers
                         </a>
-                        <a href="login.html" class="btn btn-navbar me-2">
+                        <!-- Sign-in Button -->
+                        <a href="login.html" class="btn btn-outline-light me-2">
                             <i class="fas fa-user me-2"></i>Sign in
                         </a>
-                        <div class="dropdown">
-                            <button class="btn btn-navbar dropdown-toggle" type="button" id="userDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=2211"
-                                    alt="User" class="rounded-circle header-user me-2">
-                                Hi Jack
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                <li><a class="dropdown-item" href="profile.html">My account</a></li>
-                                <li><a class="dropdown-item" href="faq.html">Delivery support</a></li>
-                                <li><a class="dropdown-item" href="contact-us.html">Contact us</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="terms.html">Terms of use</a></li>
-                                <li><a class="dropdown-item" href="privacy.html">Privacy policy</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="login.html">Logout</a></li>
-                            </ul>
-                        </div>
-                        <a href="checkout.html" class="btn btn-navbar ms-2">
+                        <!-- Cart Button -->
+                        <a href="checkout.html" class="btn btn-light ms-2">
                             <i class="fas fa-shopping-cart me-2"></i>Cart
                         </a>
-                        <!-- Toggle Button -->
-                        <button class="btn btn-navbar btn-navbar-toggle ms-2" id="toggleButton"
-                            onclick="toggleSidebar()">
+                        <!-- Sidebar Toggle Button -->
+                        <button class="btn btn-light ms-2" id="toggleButton" onclick="toggleSidebar()">
                             <i class="fas fa-bars" id="toggleIcon"></i>
                         </button>
                     </div>
@@ -85,6 +79,8 @@
             </div>
         </nav>
     </header>
+
+
     <!-- ========================== Header Section Ends ========================== -->
 
     <!-- ========================== Navbar Section Starts ========================== -->
@@ -101,7 +97,7 @@
             </li>
         </ul>
         <div class="sidebar-footer">
-            <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
             <a href="#"><i class="fas fa-question-circle"></i><span>FAQ</span></a>
             <a href="#"><i class="fas fa-phone"></i><span>Help</span></a>
         </div>
@@ -164,7 +160,7 @@
         <!-- ========================== Trending Section Starts ========================== -->
         <div class="container mt-5">
             <h2 class="section-title">Trending Restaurants</h2>
-            <a href="trending.html" class=" btn-link"
+            <a href="sections/trending.html" class=" btn-link"
                 style="display: flex; justify-content: flex-end; color: rgb(244, 80, 4); margin: 20px; text-decoration: none;">View
                 all »</a>
             <div class="row">
@@ -251,7 +247,7 @@
         <!-- ========================== Most Popular Section Starts ========================== -->
         <div class="container mt-5">
             <h2 class="section-title">Most Popular</h2>
-            <a href="popular.html" class=" btn-link"
+            <a href="sections/popular.html" class=" btn-link"
                 style="display: flex; justify-content: flex-end; color: rgb(244, 80, 4); margin: 20px; text-decoration: none;">View
                 all »</a>
             <div class="row">
@@ -445,6 +441,33 @@
 
                 sidebarOpen = !sidebarOpen;
             }
+
+            function selectLocation(location) {
+                document.getElementById('selectedLocation').innerText = location;
+            }
+
+            function selectLocation(location) {
+                document.getElementById('selectedLocation').innerText = location;
+            }
+
+            function filterLocations() {
+                const input = document.getElementById('locationSearch');
+                const filter = input.value.toLowerCase();
+                const locationList = document.getElementById('locationList');
+                const items = locationList.getElementsByTagName('li');
+
+                for (let i = 0; i < items.length; i++) {
+                    const a = items[i].getElementsByTagName('a')[0];
+                    if (a.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                        items[i].style.display = "";
+                    } else {
+                        items[i].style.display = "none";
+                    }
+                }
+            }
+
+
+
 
         </script>
         <!-- Script link for bootstrap -->
