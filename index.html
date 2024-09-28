@@ -4,68 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Delivery Website</title>
+    <title>DoorStep.com</title>
     <!-- +++++++ Bootstrap,External CSS , favicon links++++++++ -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700">
     <link rel="stylesheet" href="style_sheets/style.css">
-    <link rel="icon" type="image/x-icon" href="https://www.transparentpng.com/thumb/food/Ha2HDD-food-cut-out-png.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/ds-logo.png">
     <style>
         /* Hero Section */
-.hero-section {
-    background: url('https://img.freepik.com/free-photo/exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai_157027-1734.jpg') no-repeat center center/cover;
-    height: 90vh; /* Adjust height for full-screen effect */
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .hero-section {
+            background: url('https://img.freepik.com/free-photo/exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai_157027-1734.jpg') no-repeat center center/cover;
+            height: 90vh;
+            /* Adjust height for full-screen effect */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay with transparency */
-    z-index: 1;
-}
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Overlay with transparency */
+            z-index: 1;
+        }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-}
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+        }
 
-.hero-content h1 {
-    font-size: 4rem; /* Adjust size */
-    font-weight: bold;
-    margin-bottom: 1rem;
-    animation: fadeIn 1.5s ease-in-out;
-}
+        .hero-content h1 {
+            font-size: 4rem;
+            /* Adjust size */
+            font-weight: bold;
+            margin-bottom: 1rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
 
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    animation: fadeIn 2s ease-in-out;
-}
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
 
-.hero-content .btn {
-    padding: 1rem 2.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    animation: fadeIn 2.5s ease-in-out;
-}
+        .hero-content .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            animation: fadeIn 2.5s ease-in-out;
+        }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -75,8 +84,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark  shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="https://w7.pngwing.com/pngs/490/22/png-transparent-computer-icons-purchase-order-blog-order-miscellaneous-text-rectangle-thumbnail.png"
-                        alt="Logo" class="img-fluid" style="max-height: 40px;">
+                    <img src="./assets/images/ds-logo.png" alt="Logo" class="img-fluid"> DoorStep™
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,6 +149,11 @@
 
     <!-- ========================== Navbar Section Starts ========================== -->
     <div id="mySidebar" class="sidebar">
+        <div class="sidebar-header">
+            <img src="./assets/images/ds-logo.png" alt="Logo" class="img-fluid"
+                style="max-height: 40px; float: left; margin-right: 10px;">
+            <h3>DoorStep™</h3>
+        </div>
         <ul class="sidebar-menu">
             <li><i class="fas fa-home"></i><span>Homepage</span></li>
             <li><i class="fas fa-list"></i><span>My Orders</span></li>
@@ -159,8 +172,8 @@
         </div>
     </div>
     <!-- ========================== Navbar Section Ends ========================== -->
-     <!-- ========================== Hero Section Starts ========================== -->
-     <section class="hero-section">
+    <!-- ========================== Hero Section Starts ========================== -->
+    <section class="hero-section">
         <div class="hero-content text-center">
             <h1>Delicious Meals Delivered to Your Doorstep</h1>
             <p>Order your favorite meals with just a few clicks</p>
@@ -168,9 +181,8 @@
         </div>
     </section>
     <!-- ========================== Hero Section Ends ========================== -->
-    <!-- ========================== Hero Section Starts ========================== -->
     <div id="content" class="content">
-        <!-- Improved Offers Section -->
+        <!-- ========================== Hero Section Starts ========================== -->
         <!-- ========================== Offers Courosel Section Sarts ========================== -->
         <section class="offers-section">
             <div class="container">
@@ -476,6 +488,9 @@
                     </div>
                 </div>
             </div>
+            <marquee behavior="loop" direction="right" scrollamount="20" onmouseout="start();" onmouseover="stop();">
+                <img src="./assets/images/ds-logo.png" height="400px" />
+            </marquee>
         </div>
         <!-- ========================== Most Sales Section Ends ========================== -->
         <script>

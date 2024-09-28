@@ -1,330 +1,369 @@
- /* General Styles */
- body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
 }
 
 /* Sidebar Styles */
 .sidebar {
-    width: 0;
-    height: 90vh;
-    background-color: #343a40;
-    color: #ffffff;
-    border-right: 1px solid #495057;
-    overflow-y: auto;
-    transition: width 0.3s ease;
-    position: fixed;
-    top: 10;
-    left: 0;
-    z-index: 1000;
+  width: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ef3b1b, #e63946);
+  color: #ffffff;
+  border-right: 1px solid #495057;
+  overflow-y: auto;
+  transition: width 0.4s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding-top: 60px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
 }
 
-
-
+.sidebar-header {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 .sidebar-menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar-menu li {
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  transition: background 0.3s ease;
 }
 
 .sidebar-menu li:hover {
-    background-color: #495057;
+  background-color: #d62828;
+  cursor: ne-resize;
 }
 
 .sidebar-menu li i {
-    margin-right: 10px;
+  margin-right: 15px;
 }
 
 .sidebar-menu li span {
-    flex: 1;
+  flex: 1;
+  font-size: 1.1em;
 }
 
 .sidebar-menu .submenu-indicator {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .sidebar-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 15px 0;
-    border-top: 1px solid #495057;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.sidebar-footer a:hover {
+  color: #ffcc00;
 }
 
 .sidebar-footer i {
-    font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 body.sidebar-open {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.sidebar-open .sidebar {
+  width: 250px;
 }
 
 /* Content Styles */
 .content {
-    margin-left: 0;
-    transition: margin-left 0.3s ease;
-    padding: 20px;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+  padding: 20px;
 }
 
 .content.sidebar-open {
-    margin-left: 250px;
+  margin-left: 250px;
 }
 
 /* Toggle Button */
 .btn-navbar-toggle {
-    color: #ffffff;
-    background-color: #dc3545;
-    border: none;
+  color: #ffffff;
+  background-color: #dc3545;
+  border: none;
 }
 
 .btn-navbar-toggle:hover {
-    background-color: #c82333;
+  background-color: #c82333;
 }
 
 /* Restaurant and Carousel Styles */
 .restaurant-card {
-    border: none;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .restaurant-card img {
-    object-fit: cover;
-    height: 200px;
-    width: 100%;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
 }
 
 .carousel-item img {
-    height: 300px;
-    object-fit: cover;
-    width: 100%;
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .offers-section {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .offers-section {
-    background-color: #f8f9fa;
-    padding: 2rem 0;
+  background-color: #f8f9fa;
+  padding: 2rem 0;
 }
 
 .restaurant-card {
-    transition: transform 0.3s;
+  transition: transform 0.3s;
 }
 
 .restaurant-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .section-title {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
 }
 
 .section-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 50px;
-    height: 2px;
-    background-color: #007bff;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 2px;
+  background-color: #007bff;
 }
 
 /* Restaurant Cards Styling */
 .card-image-container {
-    position: relative;
+  position: relative;
 }
 
 .card-img-top {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .card {
-    background-color: #fff;
-    box-shadow: 10px 10px 40px 2px rgba(128, 128, 128, 0.4);
-    display: inline-block;
-    width: 375px;
-    border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 10px 10px 40px 2px rgba(128, 128, 128, 0.4);
+  display: inline-block;
+  width: 375px;
+  border-radius: 10px;
 }
 
-
 .restaurant-card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .restaurant-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card-media img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
 }
 
 .card-offer-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #ff4500;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.85em;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff4500;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.85em;
 }
 
 .card-body {
-    padding: 15px;
+  padding: 15px;
 }
 
 .card-title {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
 }
 
 .card-text {
-    font-size: 0.9em;
-    color: #666;
-    margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
 }
 
 .ratings .stars {
-    color: #ffc107;
+  color: #ffc107;
 }
 
 .ratings .reviews {
-    font-size: 0.85em;
-    color: #999;
+  font-size: 0.85em;
+  color: #999;
 }
 /* Button styling */
 .btn-primary {
-    background-color: #007bff;
-    border: none;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Location Dropdown Styling */
 #locationDropdown .dropdown-menu {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
 #locationDropdown input[type="text"] {
-    border-radius: 4px;
-    padding: 8px;
+  border-radius: 4px;
+  padding: 8px;
 }
 
 #locationList .dropdown-item:hover {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 /* For smooth transition on the input box */
 .dropdown-menu input[type="text"] {
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-    border-radius: 5px;
-    width: 100%;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 100%;
 }
 
 #locationList {
-    max-height: 200px;
-    overflow-y: auto;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 #locationList .dropdown-item {
-    transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 /* Navbar Styling */
 .navbar {
     padding: 1rem;
     background-color: #ef3b1b;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-}
-
-.navbar-brand img {
-    height: 40px;
-}
-
-.navbar-nav .nav-link {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand img {
+    height: 50px; /* Fixed height for better visibility */
+    max-height: 100%; /* Ensures it fits within the navbar */
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav .nav-link {
     color: #333; /* Dark text for better contrast */
     font-weight: 500;
-}
-
-.navbar-nav .nav-link:hover {
+    padding: 0.5rem 1rem; /* Adjust padding for better vertical alignment */
+  }
+  
+  .navbar-nav .nav-link:hover {
     background-color: rgba(0, 0, 0, 0.05); /* Subtle hover effect */
     border-radius: 4px;
-}
+  }
+  
+  .navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 0.375rem 0.75rem; /* Adjust button padding to maintain height */
+  }
+  
+  
 
 .btn-warning {
-    background-color: #ff9800; /* Bright color for Offers button */
-    border: none;
+  background-color: #ff9800; /* Bright color for Offers button */
+  border: none;
 }
 
 .btn-outline-dark {
-    border-color: #333;
-    color: #333;
+  border-color: #333;
+  color: #333;
 }
 
 .btn-dark {
-    background-color: #333;
-    border: none;
-    color: white;
+  background-color: #333;
+  border: none;
+  color: white;
 }
 
 /* Improved Dropdown Styling */
 #locationDropdown .dropdown-menu {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 #locationDropdown input[type="text"] {
-    border-radius: 4px;
-    padding: 0.5rem;
+  border-radius: 4px;
+  padding: 0.5rem;
 }
 
 #locationList .dropdown-item {
-    padding: 8px 12px;
-    transition: background-color 0.3s ease;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
 }
 
 #locationList .dropdown-item:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
